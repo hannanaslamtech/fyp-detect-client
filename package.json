@@ -1,0 +1,70 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.16",
+    "@mui/styles": "^5.12.3",
+    "@mui/x-date-pickers": "^5.0.19",
+    "@syncfusion/ej2-react-calendars": "^20.4.48",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "fuzzball": "^2.1.2",
+    "moment": "^2.29.4",
+    "pdf-lib": "^1.17.1",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-calendar": "^3.4.0",
+    "react-date-picker": "^9.2.0",
+    "react-datetime-picker": "^4.2.0",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.8.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-lazyload": "^3.2.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-toastify": "^7.0.4",
+    "recharts": "^2.6.2",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.3.10",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "openssl": "openssl version"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+    
+  }
+}
