@@ -1,0 +1,105 @@
+.dashboard{
+    display: flex;
+    background-color: #F7F7F7;
+    
+}
+
+.left__sidebar__dashboard{
+    padding-top: 40px;
+    flex: 0.2;
+    position: fixed;
+    box-shadow: 0px 5px 22px -13px grey;
+    height: 100vh;
+    width: 200px;
+    background-color: white;
+    
+}
+
+.main__body__dashboard{
+    flex: 1;
+    margin-left: 200px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+}
+
+.right__sidebar__dashboard{
+    flex: 0.2;
+    
+    
+}
+
+@media screen and (max-width: 768px) {
+    .left__sidebar__dashboard{
+       display: none;
+       flex: 0;
+      
+        
+    }
+    .main__body__dashboard{
+        flex: 1;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .right__sidebar__dashboard{
+        flex: 1;
+        
+        
+    }
+    
+}
+
+.button-91 {
+  color: #fff;
+  padding: 10px 15px;
+  background-color: #386ed2;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  width: 90px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+
+}
+
+.appointment {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    margin-top: 50px;
+    max-width: 90%px;
+    padding: 30px;
+  }
+  
+  .label {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+    text-shadow: 1px 1px 2px #ccc;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+  
+  }
+  
+  .span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .span:hover{
+    color: #000000;
+    font-size: 25px;
+    cursor: pointer;
+  }

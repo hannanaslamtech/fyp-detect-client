@@ -1,0 +1,56 @@
+
+
+.app_comp{
+    margin: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.input_submit {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+.button-34:hover {
+    background-color: #45a049;
+  }
+  
+.appointment{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    width: 90%;
+  }
+
+.button-34 {
+    background: #148080;
+    border-radius: 80px;
+    box-shadow: #020244 ;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+    margin: auto;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 5px;
+}
