@@ -69,7 +69,7 @@ const Registerpatient = () => {
           setToast(true);
           setError({});
           setTimeout(() => {
-            history.push("https://detect-fyp-server.vercel.app/login");
+            history.push("/login");
           }, 3000);
           clearTimeout();
         }

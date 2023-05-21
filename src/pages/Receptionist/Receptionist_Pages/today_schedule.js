@@ -13,7 +13,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import {Container, TableFooter, TablePagination } from '@material-ui/core';
+import ToastComp from "../../../components/Toast/Toast_Comp";
+import { IconButton, Container, TableFooter, TablePagination } from '@material-ui/core';
+import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import TablePaginationActions from '@material-ui/core/TablePagination/TablePaginationActions';
 const useStyles = makeStyles({
   table: {
@@ -25,7 +27,7 @@ const Doctor_Schedule = () => {
   const classes = useStyles();
   const [appointments, setAppointments] = useState([]);
   const { user } = useSelector((state) => state.auth);
-  const [searchText, setSearchText] = useState("");
+  const [setSearchText] = useState("");
   const [dataFiltered, setDataFiltered] = useState([]);
   const [searchedData, setSearchedData] = useState([]);
   const getAppointment = async () => {
@@ -56,6 +58,21 @@ const Doctor_Schedule = () => {
     });
     setDataFiltered(filteredUsers);
   };
+
+  const [toast, setToast] = useState(false);
+
+  const deleteUser = async (id) => {
+    const user = await Axios.get(`https://detect-fyp-server.vercel.app/users/deleteappointment/${id}`, {
+    })
+    if (user) {
+      console.log("deleted successfully")
+      setToast(true);
+      getAppointment();
+    }
+    else {
+      console.log("something went wrong")
+    }
+  }
 
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -107,6 +124,11 @@ const Doctor_Schedule = () => {
     }}
     >
        <Container fluid style={{ paddingTop: "5px" }}>
+       <ToastComp
+          setToast={setToast}
+          renderToast={toast}
+          msg="Patient removed from List"
+        />
         <Row>
           <Col md={1} sm={12} className={`d-none d-md-block`}>
           </Col>
@@ -114,16 +136,6 @@ const Doctor_Schedule = () => {
             <Container  className="mb-5">
               <div style={{ paddingBottom: "5px" }} className="d-flex justify-content-end mt-2">
               <form className="d-flex mr-2">
-              <input
-                className="form-control me-1"
-                type="search"
-                placeholder="Search by name"
-                aria-label="Search"
-                value={searchText}
-                onChange={(e) => {
-                  searchUser(e.target.value, dataFiltered);
-                }}
-              />
             </form>
               </div>
           
@@ -166,6 +178,11 @@ const Doctor_Schedule = () => {
               >
                  Time
                       </TableCell>
+                      <TableCell
+              align="center" style={{ color: 'black',fontWeight: 'bold',textDecoration: 'bold', }}
+              >
+                 Delete
+                      </TableCell>
                       
                     </TableRow>
                   </TableHead>
@@ -184,6 +201,9 @@ const Doctor_Schedule = () => {
                         <TableCell align="center">{row.patient_name}</TableCell>
                         <TableCell align="center">{date(row.date_Time)}</TableCell>
                         <TableCell align="center">{getTime(row.date_Time)}</TableCell>
+                        <IconButton onClick={() => deleteUser(row._id)}>
+                            <CheckBoxIcon className="Checkbtn" />
+                          </IconButton>
                       </TableRow>
                     ))}
                     {emptyRows > 0 && (

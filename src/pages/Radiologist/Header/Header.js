@@ -18,7 +18,7 @@ import LogoutButton from './LogoutButton';
 export default function Header() {
 
 	const screenSize = 580;
-	const [menu] = useState(false);
+	// const [menu] = useState(false);
 	const [toggleMenu, setToggleMenu] = useState(false);
 
 	// window.addEventListener('resize', (e) => {
@@ -60,7 +60,7 @@ export default function Header() {
 					</Brand>
 
 					<MobileMenuContainer
-						menu={menu}
+						// menu={menu}
 						onClick={() => setToggleMenu(!toggleMenu)}
 					>
 						<MobileMenu />

@@ -37,7 +37,7 @@ const Reports = () => {
       formData.append('image', selectedFile);
 
       // send a POST request to the MERN server with the form data
-      const response = await axios.post('https://detect-fyp-server.vercel.app/detection/classifyimage', formData, {
+      const response = await axios.post('/detection/classifyimage', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

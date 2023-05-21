@@ -111,16 +111,6 @@ const PatientTable = () => {
         />
           <div style={{ paddingBottom: "5px" }}  class="d-flex justify-content-end mt-2">
               <form class="d-flex mr-2">
-              <input
-                class="form-control me-1"
-                type="search"
-                placeholder="Search by name"
-                aria-label="Search"
-                value={searchText}
-                onChange={(e) => {
-                  searchUser(e.target.value, dataFiltered);
-                }}
-              />
             </form>
               </div>
           
