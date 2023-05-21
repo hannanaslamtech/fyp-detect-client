@@ -107,7 +107,7 @@ const PatientTable = () => {
       <ToastComp
           setToast={setToast}
           renderToast={toast}
-          msg="User Deleted Succesfully"
+          msg="Patient Deleted Succesfully"
         />
           <div style={{ paddingBottom: "5px" }}  class="d-flex justify-content-end mt-2">
               <form class="d-flex mr-2">
