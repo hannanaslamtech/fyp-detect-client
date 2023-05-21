@@ -45,7 +45,7 @@ const EditStaff = () => {
           setToast(true);
           setError(null);
           setTimeout(() => {
-            history.push("https://detect-fyp-server.vercel.app/Receptionist-dashboard");
+            history.push("/Receptionist-dashboard");
           }, 3000);
           clearTimeout();
         }
