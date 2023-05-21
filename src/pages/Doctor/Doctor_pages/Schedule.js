@@ -139,7 +139,7 @@ const Schedule = () => {
         />
          <div class="d-flex justify-content-end mt-2">
               <form style={{ paddingBottom: "5px" }}  class="d-flex mr-2">
-              <input
+              {/* <input
                 class="form-control me-1"
                 type="search"
                 placeholder="Search by name"
@@ -148,7 +148,7 @@ const Schedule = () => {
                 onChange={(e) => {
                   searchUser(e.target.value, dataFiltered);
                 }}
-              />
+              /> */}
             </form>
             </div>
               <TableContainer component={Paper}>
